@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Responsive</title>
+</head>
+ 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+     width: 20%;
+     /* width: 60%; */
+    border: solid white;
+    border-radius: 50px;
+
+}
+/* .logo img{
+    width: 60%;
+    border: solid white;
+    border-radius: 50px; */
+/* } */
+ .navbar{
+   
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+/*
+.nav-list{
+width: 70%;
+
+display: flex;
+
+align-items: center;
+}
+.nav-list li{
+list-style: none;
+padding: 23px 32px;
+}
+.nav-list li a{
+text-decoration: none;
+color: white;
+}
+.nav-list li a:hover{
+
+color: gray;
+}
+.rightnav{
+ 
+    width: 50%;
+    text-align: right;
+    padding: 0 22px;
+}
+#search{
+   padding: 5px; 
+   font-size: 17px;
+   border: 2px solid gray;
+   border-radius: 9px;
+} */
+.background{
+    background: rgba(55, 48, 48, 0.8)url(https://th.bing.com/th/id/OIP.-H3JF37JR5hDWzw5yIS4bwAAAA?pid=ImgDet&w=474&h=316&rs=1);
+   
+        background-size: cover;
+       
+
+}
+.box-main{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(7, 1, 1, 0.968);
+    max-width: 50%;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.firstsection{
+    height: 90vh;
+
+}
+.firsthalf{
+width: 80%;
+/* display: flex; */
+justify-content: center;
+flex-direction: column;
+
+}
+.secoundhalf{
+width: 30%;
+}
+.secoundhalf img{
+    width: 170px;
+     margin:  15px ; 
+    border: 1px solid black;
+    border-radius: 50px;
+    display: block;
+    /* margin: auto; */
+}
+.text-big{
+font-size: 40px;
+}
+.text-small{
+font-size: 18px;
+}.btn{
+    padding: 8px 20px;
+    margin: 8px 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+    /* font-size: 16px; */
+    background: none;
+    color:white;
+    cursor: pointer;
+
+}
+.btn:hover{
+    color: rgb(57, 83, 117);
+}
+.btn-sm{
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+.section{
+    /* height: 200px; */
+    display: flex;
+    align-items: center;
+    justify-items: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Delicious Handrawn', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+    
+}
+.tumbnil img{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+.parac{
+    padding: 80px;
+}
+.section-left{
+   
+    flex-direction: row-reverse;
+    
+}
+.sectionsubtag{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contactUs{
+    background-color: rgb(251, 254, 254);
+}
+.text-center{
+    text-align: center;
+    padding: 20px;
+    font-family: 'Delicious Handrawn', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+.form{
+   max-width: 300px; 
+   margin: 20px auto;
+ 
+}
+.form input{
+    width: 100%;
+    font-size: 18px;
+    border: 2px solid rgb(116, 114, 114);
+    border-radius: 5px;
+    margin-top: 20px ;
+    padding: 2px;
+
+}
+.btn-dark{
+    color: black;
+    border: 2px solid ;
+
+}
+#textarea{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px ;
+    padding: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-footer{
+    text-align: center;
+    padding: 30px;
+    font-family: 'Delicious Handrawn', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+background-color: lightgrey;
+display: flex;
+justify-content: center;
+}
+.background-color{
+    background-color: rgb(54, 52, 52);
+    
+}
+.burger{
+    display: none;
+position: absolute;
+cursor: pointer;
+right: 5%;
+top: 15px;
+
+}
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px;
+}
+@media only screen and (max-width:1140px){
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .rightnav{
+        text-align: center;
+    }
+    #search{
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav{
+        height: 7cqmax;
+
+    }
+    .v-class{
+opacity: 0;
+    }
+}
+</style>
+<body>
+    <!-- <div  id="slide"> -->
+  <!-- <nav class="navbar background h-nav">
+    <div class="logo"><img src="https://logodix.com/logo/2196995.jpg" alt="logo"></div>
+    <ul class="nav-list v-class">
+       
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="C:/Users/Aman/OneDrive/Desktop/skyview/first%20web%20page/logIn.html?">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="rightnav  v-class">
+        <input type="text" name="search" id="search">
+        <button class="btn btn-sm">search</button>
+    </div>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+  </nav>   -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary background">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://logodix.com/logo/2196995.jpg" alt="logo" width="60px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- </div> -->
+  
+  <section class="background firstsection">
+    <div class="box-main">
+        <div class="firsthalf">
+<p class="text-big">The Futuer of Education is here</p>
+<p class="text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quibusdam recusandae ducimus! Provident sed labore reprehenderit at ea praesentium obcaecati inventore consequatur similique assumenda, omnis impedit eaque id, ducimus velit.</p>
+<button class="btn"> Subescribe</button>
+<button class="btn"> Watch Video</button>
+        </div>
+        <div class="secoundhalf">
+            <img src="https://th.bing.com/th/id/OIP.QetNWutN_MelYTg7rJjNWQHaKV?pid=ImgDet&w=474&h=661&rs=1" alt=" buliding img">
+        </div>
+    </div>
+  </section>
+
+  <!-- secound section -->
+  <section class="section">
+    <div class="parac">
+    <p class="sectiontag text-big">The end of illiteracy if here</p>
+    <p class="sectionsubtag text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores temporibus illum magni a, sint dolor hic atque modi ipsum dolorum autem debitis similique ratione incidunt labore aliquid, nisi ducimus soluta non. Unde harum voluptate maxime non recusandae quis eos officia magni pariatur perspiciatis quo alias minima quasi ratione vitae accusantium, fugit delectus repellendus in quidem mollitia ipsam. Error architecto earum itaque, cupiditate voluptate consequuntur, nisi explicabo at sunt blanditiis expedita enim veniam aperiam ullam? Recusandae laudantium impedit sunt corporis magnam sint voluptatem explicabo. </p>
+</div>
+    <div class="tumbnil">
+        <img src="https://source.unsplash.com/random?coding,apple" alt="">
+    </div>
+  </section>
+
+  <!-- secound 2 section -->
+  <section class="section section-left">
+    <div class="parac">
+    <p class="sectiontag text-big">The end of illiteracy if here</p>
+    <p class="sectionsubtag text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores temporibus illum magni a, sint dolor hic atque modi ipsum dolorum autem debitis similique ratione incidunt labore aliquid, nisi ducimus soluta non. Unde harum voluptate maxime non recusandae quis eos officia magni pariatur perspiciatis quo alias minima quasi ratione vitae accusantium, fugit delectus repellendus in quidem mollitia ipsam. Error architecto earum itaque, cupiditate voluptate consequuntur, nisi explicabo at sunt blanditiis expedita enim veniam aperiam ullam? Recusandae laudantium impedit sunt corporis magnam sint voluptatem explicabo. </p>
+</div>
+    <div class="tumbnil">
+        <img src="https://source.unsplash.com/random?coding,apple,html" alt="">
+    </div>
+  </section>
+
+  <!-- secound 3 section -->
+  <section class="section">
+    <div class="parac">
+    <p class="sectiontag text-big">The end of illiteracy if here</p>
+    <p class="sectionsubtag text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores temporibus illum magni a, sint dolor hic atque modi ipsum dolorum autem debitis similique ratione incidunt labore aliquid, nisi ducimus soluta non. Unde harum voluptate maxime non recusandae quis eos officia magni pariatur perspiciatis quo alias minima quasi ratione vitae accusantium, fugit delectus repellendus in quidem mollitia ipsam. Error architecto earum itaque, cupiditate voluptate consequuntur, nisi explicabo at sunt blanditiis expedita enim veniam aperiam ullam? Recusandae laudantium impedit sunt corporis magnam sint voluptatem explicabo. </p>
+</div>
+    <div class="tumbnil">
+        <img src="https://source.unsplash.com/random?javascript,apple" alt="">
+    </div>
+  </section>
+  
+  
+  <!-- section contactUs -->
+  <div class="contactUs">
+    
+    <h1 class="text-center">Contact Us</h1>
+    <div class="form">
+        <input type="text" name="name" id="name" placeholder="enter your name">
+        <input type="text" name="email" id="email" placeholder="enter your email">
+        <input type="text" name="phone" id="phone" placeholder="enter your phone">
+        <textarea name="" id="textarea" cols="30" rows="10" placeholder="Enter your sagation"></textarea>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <footer class="background-color">
+    <p class="text-footer">
+    Copyright &copy; 2023 - WWW.All rights reserved
+    </p>
+  </footer>
+
+
+
+ <!-- <script src="res.js"></script> -->
+
+ <script>
+    $(document).ready(function(){
+        $('.burger').click(function(){
+            $('#slide').slideToggle();
+            $('#slide').css(d)
+        });
+    });
+</script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
